@@ -12,7 +12,7 @@ public class Medicamento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nombre; // solo letras - incluya ñ y tíldes - maximo 20 caracteres
-    private String  presentacion; // solo letras - incluya ñ y tildes - max 20 caracteres
+    private String presentacion; // solo letras - incluya ñ y tildes - max 20 caracteres
     private String dosis; // formato 3/8h
     private String laboratorio; // solo letras - incluya ñ y tíldes - maximo 20 caracteres
     private LocalDate fechaCaducidad; // mayor a 2025 y menor a 2027
