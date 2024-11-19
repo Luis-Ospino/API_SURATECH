@@ -1,9 +1,12 @@
 package com.example.APPI.REST.G411.Servicios;
 
 import com.example.APPI.REST.G411.MODELOS.Enfermedad;
+import com.example.APPI.REST.G411.MODELOS.Paciente;
 import com.example.APPI.REST.G411.repositorios.IRepositorioEnfermedad;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class EnfermedadServicio {
@@ -19,8 +22,12 @@ public class EnfermedadServicio {
         }
     }
 
-    public Enfermedad buscarEnfermedad(Enfermedad datosEnfermedad){
-        return null;
+    public List<Enfermedad> buscarEnfermedad() throws Exception{
+        try{
+            return IRepositorioEnfermedad.findAll();
+        }catch (Exception error){
+            throw new Exception(error.getMessage());
+        }
     }
 
     public Enfermedad buscarEnfermedadId(Enfermedad datosEnfermedad){
