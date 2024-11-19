@@ -29,7 +29,7 @@ public class PacienteServicio {
 
     // buscar pacientes
 
-    public List<Paciente> buscarPaciente() throws Exception{
+    public List<Paciente> buscarPacientes() throws Exception{
         try{
             return IRepositorioPaciente.findAll();
         }catch (Exception error){
